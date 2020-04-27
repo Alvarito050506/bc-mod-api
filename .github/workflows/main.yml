@@ -21,8 +21,10 @@ jobs:
         npm install
     
     - name: Add remote origin
+      env:
+        API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/bcmodapi.git
+        git remote add heroku https://heroku:$API_KEY@git.heroku.com/bcmodapi.git
 
     - name: Deploy to Heroku
       run: |
