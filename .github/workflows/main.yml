@@ -23,4 +23,4 @@ jobs:
         git remote add heroku https://heroku:$API_KEY@git.heroku.com/bcmodapi.git
         git show-ref
         git remote -v
-        git push heroku master
+        git push heroku refs/remotes/origin/master
